@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "72-312 Low Power Audio Amp")
-		(rev "1")
+		(rev "2")
 		(company "KITARON ")
 		(comment 1 "Model 72-312")
 		(comment 2 "Reverse engineered by polymatt")
@@ -1644,7 +1644,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_BJT:BC107"
+		(symbol "Transistor_BJT:2SB631"
 			(pin_names
 				(offset 0)
 				(hide yes)
@@ -1661,7 +1661,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "BC107"
+			(property "Value" "2SB631"
 				(at 5.08 0 0)
 				(effects
 					(font
@@ -1670,7 +1670,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-18-3"
+			(property "Footprint" "Package_TO_SOT_THT:TO-126-3_Vertical"
 				(at 5.08 -1.905 0)
 				(effects
 					(font
@@ -1681,7 +1681,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.b-kainka.de/Daten/Transistor/BC108.pdf"
+			(property "Datasheet" "http://pdf.datasheetcatalog.com/datasheet/sanyo/ds_pdf_e/2SB631.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1691,7 +1691,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "0.1A Ic, 50V Vce, Low Noise General Purpose NPN Transistor, TO-18"
+			(property "Description" "-1A Ic, -100V Vce, High Voltage Power PNP Transistor, TO-126"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1700,7 +1700,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "NPN low noise transistor"
+			(property "ki_keywords" "High Voltage Transistor"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1709,7 +1709,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "TO?18*"
+			(property "ki_fp_filters" "TO?126*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1718,7 +1718,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "BC107_0_1"
+			(symbol "2SB631_0_1"
 				(polyline
 					(pts
 						(xy -2.54 0) (xy 0.635 0)
@@ -1743,19 +1743,6 @@
 						(type none)
 					)
 				)
-				(circle
-					(center 1.27 0)
-					(radius 2.8194)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "BC107_1_1"
 				(polyline
 					(pts
 						(xy 0.635 0.635) (xy 2.54 2.54)
@@ -1780,9 +1767,20 @@
 						(type none)
 					)
 				)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(polyline
 					(pts
-						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778)
+						(xy 2.286 -1.778) (xy 1.778 -2.286) (xy 1.27 -1.27) (xy 2.286 -1.778)
 					)
 					(stroke
 						(width 0)
@@ -1792,6 +1790,8 @@
 						(type outline)
 					)
 				)
+			)
+			(symbol "2SB631_1_1"
 				(pin input line
 					(at -5.08 0 0)
 					(length 2.54)
@@ -1802,7 +1802,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1820,7 +1820,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2415,12 +2415,6 @@
 		(uuid "88283ef4-6c78-479b-a48f-cb2dc8fb8db5")
 	)
 	(junction
-		(at 154.94 105.41)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "92a76454-0c85-4d1b-857c-a9286bba7d5d")
-	)
-	(junction
 		(at 80.01 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2515,6 +2509,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f51ae378-33a5-4994-a8e6-bf55027a3428")
+	)
+	(junction
+		(at 154.94 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fab5ca2c-c69d-4cb0-b697-6a823c39f039")
 	)
 	(no_connect
 		(at 128.27 71.12)
@@ -3672,6 +3672,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 105.41) (xy 154.94 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b223a7d1-47d0-4560-bc75-d56f50ec6afe")
+	)
+	(wire
+		(pts
 			(xy 171.45 92.71) (xy 171.45 78.74)
 		)
 		(stroke
@@ -3832,16 +3842,6 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 91.44) (xy 154.94 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ce06f65b-d8ed-4aff-953a-ca4cee611733")
-	)
-	(wire
-		(pts
 			(xy 90.17 115.57) (xy 72.39 115.57)
 		)
 		(stroke
@@ -3972,7 +3972,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 105.41) (xy 154.94 123.19)
+			(xy 154.94 91.44) (xy 154.94 105.41)
 		)
 		(stroke
 			(width 0)
@@ -4240,82 +4240,6 @@
 			(project ""
 				(path "/dc7e3b33-9d16-4ee0-9b4b-cc5b4d8259a3"
 					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:BC107")
-		(at 209.55 120.65 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "195f569f-3147-4988-ae2b-3d701150d14e")
-		(property "Reference" "Q1"
-			(at 204.47 119.3799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2SB33"
-			(at 204.47 121.9199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-18-3"
-			(at 204.47 122.555 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.b-kainka.de/Daten/Transistor/BC108.pdf"
-			(at 209.55 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.1A Ic, 50V Vce, Low Noise General Purpose NPN Transistor, TO-18"
-			(at 209.55 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "5ab2804e-791a-4495-a29b-5b279955331c")
-		)
-		(pin "3"
-			(uuid "4d2fbf01-f1d2-48c7-acec-b0b58b4623ac")
-		)
-		(pin "1"
-			(uuid "0ec214ab-0b05-44d7-8700-3cd5899f99eb")
-		)
-		(instances
-			(project ""
-				(path "/dc7e3b33-9d16-4ee0-9b4b-cc5b4d8259a3"
-					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -4662,6 +4586,81 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_BJT:2SB631")
+		(at 92.71 110.49 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5592bbd0-49d0-43e5-95e3-59de5afc4ccf")
+		(property "Reference" "Q7"
+			(at 87.63 111.7601 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2SB263"
+			(at 87.63 109.2201 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-126-3_Vertical"
+			(at 87.63 108.585 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://pdf.datasheetcatalog.com/datasheet/sanyo/ds_pdf_e/2SB631.pdf"
+			(at 92.71 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "-1A Ic, -100V Vce, High Voltage Power PNP Transistor, TO-126"
+			(at 92.71 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "a0ff0258-060c-4aba-bf6f-ef63bffc66c2")
+		)
+		(pin "2"
+			(uuid "5e3d9aa4-1a66-4e5a-8b0f-21e955364f20")
+		)
+		(pin "1"
+			(uuid "d1cbeb72-be30-405f-8501-881e44bc865f")
+		)
+		(instances
+			(project "Kitaron 72-312"
+				(path "/dc7e3b33-9d16-4ee0-9b4b-cc5b4d8259a3"
+					(reference "Q7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 259.08 148.59 0)
 		(unit 1)
@@ -4863,17 +4862,16 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC107")
-		(at 92.71 110.49 0)
-		(mirror y)
+		(lib_id "Transistor_BJT:2SB631")
+		(at 149.86 105.41 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "60713037-21de-4ca8-80c6-d578a2847b77")
-		(property "Reference" "Q5"
-			(at 87.63 109.2199 0)
+		(uuid "5ac3efd4-f5f8-42db-9216-a74116fed8f4")
+		(property "Reference" "Q8"
+			(at 144.78 106.6801 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4881,8 +4879,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2SB263"
-			(at 87.63 111.7599 0)
+		(property "Value" "2SB33"
+			(at 144.78 104.1401 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4890,8 +4888,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-18-3"
-			(at 87.63 112.395 0)
+		(property "Footprint" "Package_TO_SOT_THT:TO-126-3_Vertical"
+			(at 144.78 103.505 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4901,8 +4899,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.b-kainka.de/Daten/Transistor/BC108.pdf"
-			(at 92.71 110.49 0)
+		(property "Datasheet" "http://pdf.datasheetcatalog.com/datasheet/sanyo/ds_pdf_e/2SB631.pdf"
+			(at 149.86 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4911,8 +4909,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "0.1A Ic, 50V Vce, Low Noise General Purpose NPN Transistor, TO-18"
-			(at 92.71 110.49 0)
+		(property "Description" "-1A Ic, -100V Vce, High Voltage Power PNP Transistor, TO-126"
+			(at 149.86 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4920,19 +4918,19 @@
 				(hide yes)
 			)
 		)
-		(pin "2"
-			(uuid "39884a70-73fb-47a9-94a7-cc7de2e4d5bd")
-		)
 		(pin "3"
-			(uuid "1199c74a-a62a-428a-b85e-945927796faf")
+			(uuid "c6b88cca-0eab-4dbe-b8be-f0ab53af7cc3")
+		)
+		(pin "2"
+			(uuid "e89aab16-2b5d-4639-a75f-4eaf3ccd36be")
 		)
 		(pin "1"
-			(uuid "7622837e-c06b-4146-8d3b-70f594e76b06")
+			(uuid "dbfe42e8-9fac-4993-b27f-d1fe94086b24")
 		)
 		(instances
 			(project "Kitaron 72-312"
 				(path "/dc7e3b33-9d16-4ee0-9b4b-cc5b4d8259a3"
-					(reference "Q5")
+					(reference "Q8")
 					(unit 1)
 				)
 			)
@@ -5008,17 +5006,16 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC107")
-		(at 92.71 93.98 0)
-		(mirror y)
+		(lib_id "Transistor_BJT:2SB631")
+		(at 209.55 120.65 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6461ee32-d729-4fd6-8bd9-4e378e9cdb24")
-		(property "Reference" "Q4"
-			(at 87.63 92.7099 0)
+		(uuid "6f79626d-99a3-4630-a96a-ec6e6c460c65")
+		(property "Reference" "Q10"
+			(at 204.47 121.9201 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5026,8 +5023,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2SB263"
-			(at 87.63 95.2499 0)
+		(property "Value" "2SB33"
+			(at 204.47 119.3801 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5035,8 +5032,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-18-3"
-			(at 87.63 95.885 0)
+		(property "Footprint" "Package_TO_SOT_THT:TO-126-3_Vertical"
+			(at 204.47 118.745 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5046,8 +5043,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.b-kainka.de/Daten/Transistor/BC108.pdf"
-			(at 92.71 93.98 0)
+		(property "Datasheet" "http://pdf.datasheetcatalog.com/datasheet/sanyo/ds_pdf_e/2SB631.pdf"
+			(at 209.55 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5056,8 +5053,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "0.1A Ic, 50V Vce, Low Noise General Purpose NPN Transistor, TO-18"
-			(at 92.71 93.98 0)
+		(property "Description" "-1A Ic, -100V Vce, High Voltage Power PNP Transistor, TO-126"
+			(at 209.55 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5065,19 +5062,19 @@
 				(hide yes)
 			)
 		)
-		(pin "2"
-			(uuid "242b170c-6724-450d-91ab-a08f1d754c36")
-		)
 		(pin "3"
-			(uuid "c00a6f28-36f2-4188-9834-8681ae35443a")
+			(uuid "290846e7-bfb8-4276-a501-00f3b4ee0557")
+		)
+		(pin "2"
+			(uuid "c290a53a-0902-4375-bb88-bc3594ebf4dc")
 		)
 		(pin "1"
-			(uuid "ce50cf65-ea0b-459a-b0c2-87c7523ef500")
+			(uuid "49f04781-366d-4b60-9320-c9fa14b30701")
 		)
 		(instances
 			(project "Kitaron 72-312"
 				(path "/dc7e3b33-9d16-4ee0-9b4b-cc5b4d8259a3"
-					(reference "Q4")
+					(reference "Q10")
 					(unit 1)
 				)
 			)
@@ -5494,6 +5491,81 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_BJT:2SB631")
+		(at 173.99 104.14 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9a7f5456-fc89-4d4a-948f-1b27b9512012")
+		(property "Reference" "Q9"
+			(at 168.91 105.4101 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2N1305"
+			(at 168.91 102.8701 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-126-3_Vertical"
+			(at 168.91 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://pdf.datasheetcatalog.com/datasheet/sanyo/ds_pdf_e/2SB631.pdf"
+			(at 173.99 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "-1A Ic, -100V Vce, High Voltage Power PNP Transistor, TO-126"
+			(at 173.99 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "7f8f20e2-fc1e-4560-8dcb-39abc413a3fb")
+		)
+		(pin "2"
+			(uuid "f7ed2bef-e3c4-4bfa-b802-0c8a2305348b")
+		)
+		(pin "1"
+			(uuid "28de2609-d925-4588-8e53-ba509a70c4d9")
+		)
+		(instances
+			(project "Kitaron 72-312"
+				(path "/dc7e3b33-9d16-4ee0-9b4b-cc5b4d8259a3"
+					(reference "Q9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:D")
 		(at 55.88 124.46 0)
 		(unit 1)
@@ -5574,6 +5646,81 @@
 			(project ""
 				(path "/dc7e3b33-9d16-4ee0-9b4b-cc5b4d8259a3"
 					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:2SB631")
+		(at 92.71 93.98 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a322f7c4-894d-4b41-ae1b-d98eed26c3ff")
+		(property "Reference" "Q6"
+			(at 87.63 95.2501 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2SB263"
+			(at 87.63 92.7101 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-126-3_Vertical"
+			(at 87.63 92.075 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://pdf.datasheetcatalog.com/datasheet/sanyo/ds_pdf_e/2SB631.pdf"
+			(at 92.71 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "-1A Ic, -100V Vce, High Voltage Power PNP Transistor, TO-126"
+			(at 92.71 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "299dccfd-5bba-4d1c-994b-85d3d220e9b1")
+		)
+		(pin "2"
+			(uuid "da8cf40b-826e-44bb-b665-efcea89cbf8a")
+		)
+		(pin "1"
+			(uuid "e3f74adc-f7e7-4006-a4cb-76d57f42a105")
+		)
+		(instances
+			(project ""
+				(path "/dc7e3b33-9d16-4ee0-9b4b-cc5b4d8259a3"
+					(reference "Q6")
 					(unit 1)
 				)
 			)
@@ -5845,82 +5992,6 @@
 			(project "Kitaron 72-312"
 				(path "/dc7e3b33-9d16-4ee0-9b4b-cc5b4d8259a3"
 					(reference "R6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:BC107")
-		(at 149.86 105.41 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b6a75cde-523d-42d9-98d5-889358587841")
-		(property "Reference" "Q3"
-			(at 144.78 104.1399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2SB33"
-			(at 144.78 106.6799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-18-3"
-			(at 144.78 107.315 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.b-kainka.de/Daten/Transistor/BC108.pdf"
-			(at 149.86 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.1A Ic, 50V Vce, Low Noise General Purpose NPN Transistor, TO-18"
-			(at 149.86 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "d00181fa-200e-4bfd-8716-2d57a2de8093")
-		)
-		(pin "3"
-			(uuid "838efc84-6107-4c27-b372-311e9a0f0d81")
-		)
-		(pin "1"
-			(uuid "644e04a1-a753-4e2b-917b-e9ad146c5a19")
-		)
-		(instances
-			(project "Kitaron 72-312"
-				(path "/dc7e3b33-9d16-4ee0-9b4b-cc5b4d8259a3"
-					(reference "Q3")
 					(unit 1)
 				)
 			)
@@ -6483,82 +6554,6 @@
 			(project "Kitaron 72-312"
 				(path "/dc7e3b33-9d16-4ee0-9b4b-cc5b4d8259a3"
 					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:BC107")
-		(at 173.99 104.14 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f0d9c330-45a0-484a-8172-4f92035acd59")
-		(property "Reference" "Q2"
-			(at 168.91 102.8699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2N1305"
-			(at 168.91 105.4099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-18-3"
-			(at 168.91 106.045 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.b-kainka.de/Daten/Transistor/BC108.pdf"
-			(at 173.99 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.1A Ic, 50V Vce, Low Noise General Purpose NPN Transistor, TO-18"
-			(at 173.99 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "b75ebfa9-7c6e-4a81-befa-71e3fa5e6d22")
-		)
-		(pin "3"
-			(uuid "f6a8fc53-8f81-4a08-9f6e-ad0889f14b60")
-		)
-		(pin "1"
-			(uuid "e77a9d12-72f8-4849-ae65-bd9b8e08b8fb")
-		)
-		(instances
-			(project "Kitaron 72-312"
-				(path "/dc7e3b33-9d16-4ee0-9b4b-cc5b4d8259a3"
-					(reference "Q2")
 					(unit 1)
 				)
 			)
