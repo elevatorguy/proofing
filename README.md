@@ -2,7 +2,7 @@
 
 I came across this board board inside a 1982 USI Pi4 CRT that was what looked like an after-market hobbist mod.
 
-This was documented in [this video](https://youtube.com/@polymatt).
+This was documented in [this video](https://youtube.com/watch?v=9xYQU5SldcA).
 
 ![Schematic](./images/kitaron72-312_schematic.png)
 ![Board Scan](./assets/Kitaron%2072-312.jpeg)
