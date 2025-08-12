@@ -1,6 +1,6 @@
 # KITARON 72-312 Mono Audio Amp
 
-I came across this board board inside a 1982 USI Pi4 CRT that was what looked like an after-market hobbist mod.
+I came across this board inside a 1982 USI Pi4 CRT that was what looked like an after-market hobbist mod.
 
 This was documented in [this video](https://youtube.com/watch?v=9xYQU5SldcA).
 
